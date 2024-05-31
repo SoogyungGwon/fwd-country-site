@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="Dokdo is a beautiful island in Korea. Let's learn about where it is located and how beautiful it is."/>
+	<title>Dokdo - beautiful island in Korea.</title>
+	<!-- Favicon -->
+	<link rel="icon" href="images/favicon/favicon.ico" sizes="any"> 
+	<link rel="icon" href="images/favicon/favicon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png"/>
+	<link rel="manifest" href="images/favicon/site.webmanifest" />
+	<!-- link for fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap" rel="stylesheet">
+	<!-- css -->
+	<link rel="stylesheet" href="styles/normalize-fwd.css">
+	<link rel="stylesheet" href="styles/styles.css">
+	<!--Custom script-->
+	<script defer src="scripts/script.js"></script>
+</head>
+
+<body id="top">
+	
+	<header>
+		<nav id="site-navigation" class="site-navigation">
+			<a href="index.html"><img src="images/logo.svg" id="top-logo" alt="logo image, click to go to home"></a>
+			<ul class="nav-menu" id="header-menu">
+				<li id="about_nav"><a href="about.html">About</a></li>
+				<li id="gallery_nav"><a href="gallery.html">Gallery</a></li>
+				<li id="credit_nav"><a href="credit.html">Credit</a></li>
+			</ul>
+			<button class="menu-toggle" aria-controls="header-menu" aria-expanded="false" aria-label="Menu Toggle">
+				<svg class="hbg-button" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m22 16.75c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm0-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm0-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75z" fill-rule="nonzero"/></svg>
+			</button>
+		</nav>
+	</header>
+
+	<main>
+		<!-- adding div to separete banner part and main contents for big screen res -->
+		<div id="top_banner">
+			<h1 id="main_h1">Dokdo</h1>
+			<img id="main-header-img" src="images/main-header.jpg" alt="">
+		</div>
+		<section>
+			<h2 id="about-section-h2">About</h2><a href="about.html" class="more-link"></a>
+			<blockquote cite="http://www.dokdo.re.kr/home/cms/cmsCont.do?cntnts_sn=63">
+				<p>Dokdo is an island located in the easternmost part of Korea. Administratively, it belongs to Eulleung-eup, Ulleung-gun, Gyeongsangbuk-do, and its coordinates are 37 degrees 14 minutes 26.8 seconds north latitude and 131 degrees 52 minutes 10.4 seconds east longitude. Looking at the distance from major points, it is located 87.4km southeast of Ulleungdo Island, and 157.5km northwest of Japan's Oki Island.Ulleungdo and Dokdo are visible to each other when the weather is clear, but Dokdo is not visible from Oki Island.</p>
+				<footer>KIOST, <cite><a href="https://www.dokdo.re.kr/">Dokdo information system</a></cite></footer>
+			</blockquote>
+			<h3>Address</h3>
+			<p>1-96 Dokdo-ri, Ulleung-eup, Ulleung-gun, Gyeongsangbukdo (40240)</p>
+			<iframe id="gmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3176.1997980062115!2d131.8640596556063!3d37.24296679262366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fe1800808859329%3A0xd55b157e96f1a2ea!2sDokdo!5e0!3m2!1sen!2skr!4v1699755779923!5m2!1sen!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</section>
+		<section>
+			<h2 id="gallery-section-h2">Gallery</h2><a href="gallery.html" class="more-link"></a>
+			<article class="gallery-imgs">
+				<figure class="gallery-img">
+					<img src="images/gallery/spring/s2.jpg" class="gallery_img" alt="Spring - Dongdo's photo taken at Seodo's stairs">
+				</figure>
+				<figure class="gallery-img">
+					<img src="images/gallery/spring/s3.jpg" class="gallery_img" alt="Spring - Gaje Rock seen from the top of Seodo Island">
+				</figure>
+				<figure class="gallery-img">
+					<img src="images/gallery/summer/sm1.jpg" class="gallery_img" alt="Summer - Dongdo Face Rock">
+				</figure>
+				<figure class="gallery-img">
+					<img src="images/gallery/summer/sm2.jpg" class="gallery_img" alt="Summer - Dongdo Ceiling Cave">
+				</figure>
+				<figure class="gallery-img">
+					<img src="images/gallery/autumn/a1.jpg" class="gallery_img" alt="Autumn - Dokdo's sunset">
+				</figure>
+				<figure class="gallery-img">
+					<img src="images/gallery/winter/w1.jpg" class="gallery_img" alt="Winter - the scenery when the snow had stopped">
+				</figure>
+			</article>
+		</section>
+	</main>
+
+
+	<footer id="page_footer">
+		<p>
+		<a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>Facebook</title><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z"/></svg></a>
+		<a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>Twitter</title><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/></svg></a></p>
+		<p>&copy; 2023 FWD Soogyung Gwon</p>
+	</footer>
+
+</body>
+</html>

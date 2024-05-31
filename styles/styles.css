@@ -1,0 +1,449 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN ANOTHER FILE)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Fonts
+--------------------------------------------- */
+
+/* fallback fonts - google font in case adobe fonts doesn't load*/
+@font-face {
+    font-family: 'fira_sans';
+    src: url('../fonts/firasans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/firasans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	font-display: swap;
+}
+
+/* Typography
+--------------------------------------------- */
+body {
+	font-family: fira_sans, Geneva, Tahoma, sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: .5rem 1rem;
+	font-family: 'Tapestry', fira_sans, Geneva, Tahoma, sans-serif;
+	font-size: 1.52rem;
+	line-height: 1.5;
+	font-weight: 400;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+nav {
+	font-family: 'Tapestry', fira_sans, Geneva, Tahoma, sans-serif;
+	font-weight: 400;
+}
+
+cite {
+	font-style: normal;
+}
+
+/* Links
+--------------------------------------------- */
+a {
+	color:#fff;
+	text-decoration: none;
+}
+
+a:visited {
+	color:#fff;
+}
+
+a:hover {
+	color:#6EB1FF;
+}
+
+.nav-menu a {
+	color:#000;
+}
+
+section a {
+	text-decoration: underline;
+}
+
+.nav-menu a:hover {
+	border-bottom: solid 2px;
+	border-color: #007bff;
+	color:#007bff;
+}
+
+a:focus {
+	color:#007bff;
+	outline: solid 2px;
+}
+
+a:active {
+	color:#007bff;
+}
+
+button:focus {
+	color:#007bff;
+	outline: solid 2px;
+}
+
+button:hover {
+	color:#007bff;
+}
+
+button:active {
+	color:black;
+}
+
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+body {
+	min-height: 100vh;
+	background-color: #0053B3;
+}
+
+p{
+	margin: .5rem 1rem;
+}
+
+section {
+	margin-bottom: 3rem;
+}
+
+section:last-of-type {
+	margin-bottom: 10rem;
+}
+
+figure {
+	margin: 0;
+}
+
+h2 {
+	background-image: url(../images/waterspray.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	text-shadow: 1px 1px 2px black;
+	border-bottom: 2px solid #fff;
+	width: fit-content;
+}
+
+
+.gallery_img {
+	object-fit: cover;
+}
+
+.gallery-img img:hover {
+	opacity: 0.7;
+	object-fit: none;
+}
+
+
+table {
+	text-align: left;
+	margin: 0 1rem;
+	border-collapse: collapse;
+	border: 1px solid;
+	white-space: pre-line;
+}
+
+table th {
+	background-color: rgb(255,255,255,.15);
+	font-weight: normal;
+}
+table th, table td {
+	border: 1px solid;
+	padding: .5rem;
+}
+
+video {
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Animation
+--------------------------------------------------------------*/
+@keyframes appear {
+	from {
+	  opacity: 0%
+	}
+  
+	to {
+		opacity: 100%
+	}
+  }
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+/* Body
+--------------------------------------------- */
+body {
+	animation-duration: 3s;
+	animation-name: appear;
+}
+
+/* Header
+--------------------------------------------- */
+nav {
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+	background-color: rgb(255,255,255,.7);
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+	display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+	list-style: none;
+	padding-left: 0;
+	justify-items: center;
+	position: absolute;
+	display: flex;
+	margin-top: 0.5rem;
+	display: none;
+	top: 3.75rem;
+	text-align: center;	
+}
+
+nav li {
+	margin: auto 1rem;
+}
+
+#top-logo, .hbg-button {
+	width: 2rem;
+}
+
+#top-logo {
+	margin-left: .5rem;
+}
+
+header a {
+	margin: auto 0;
+}
+
+
+/* Responsive - Mobile menu on/off */
+
+.site-navigation.toggled ul {
+	display: block;
+	width: 100%;
+	font-size: 1.5rem;
+	background-color: rgb(255,255,255,.7);
+}
+
+.menu-toggle {
+	display: block;
+	background-color: transparent;
+	border: 0;
+	padding: 1rem;
+}
+
+.menu-toggle:focus {
+	border: 0;
+	outline: 1px dotted;
+}
+
+/*Basic styles from up here for small screens lesser than 480px
+
+
+/* 480px */
+@media (min-width: 30em) {
+	nav ul, .site-navigation.toggled ul {
+		font-size: 1.25rem;
+		list-style: none;
+		padding-left: 0;
+		justify-items: center;
+		justify-content: right;
+		display: flex;
+		top: 0;
+		position: relative;
+		margin: 1rem;
+		background-color: unset;
+	}
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.site-navigation {
+		flex: 1 1 auto;
+		padding: 0 0 0 1rem;
+	}
+
+	#top-logo {
+		margin-left: 0;
+	}
+}
+
+/* 768px */
+@media (min-width: 48em) {
+
+}
+
+@media (min-width: 120em) {
+
+}
+
+
+/* Main
+--------------------------------------------- */
+main {
+	
+}
+
+#top_banner {
+	position: relative;
+}
+
+#main-header-img {
+	object-fit: cover;
+    top: 3rem;
+	height: 80vh;
+}
+
+#main_h1 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 5rem;
+	text-align: center;
+	font-size: 4rem;
+	color: white;
+	background-image: url("../images/waterspray.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: 900;
+	text-shadow: 2px 2px 2px black;
+}
+
+blockquote {
+	background-color: rgb(255, 255, 255, .10);
+	padding: .5rem;
+}
+
+blockquote footer {
+	text-align: right;
+}
+
+#gmap {
+	width: 100%;
+}
+
+/* About page */
+#how-to-visit li {
+	margin-right: 1rem;
+}
+
+
+/* adding button like svg to jump to the sub-pages for each h2 --------*/
+#about-section-h2, #gallery-section-h2 {
+	display: inline-block;
+}
+
+.more-link::after {
+	content: url('data:image/svg+xml,<svg clip-rule="evenodd" fill="white" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m6 18h-3c-.48 0-1-.379-1-1v-14c0-.481.38-1 1-1h14c.621 0 1 .522 1 1v3h3c.621 0 1 .522 1 1v14c0 .621-.522 1-1 1h-14c-.48 0-1-.379-1-1zm1.5-10.5v13h13v-13zm7.869 2.5s-2.136.002-4.616.003c-.414 0-.75.336-.75.75-.001 2.479-.003 4.612-.003 4.612 0 .41.335.745.75.745.414 0 .75-.334.75-.745v-2.804l4.439 4.439c.293.293.768.293 1.061 0s.293-.768 0-1.061l-4.439-4.439h2.808c.409 0 .741-.336.741-.75s-.333-.75-.741-.75zm1.131-4v-2.5h-13v13h2.5v-9.5c0-.481.38-1 1-1z" fill-rule="nonzero"/></svg>');
+    vertical-align: middle;
+	display: inline-block;
+	width: 1rem;
+}
+/*--------------------------------------------------------------------*/
+
+/* 480px */
+@media (min-width: 30em) {
+	#main-header-img {
+		width: 100vw;
+	}
+}
+
+/* 600px */
+@media (min-width: 37.5em) {
+
+	.gallery-imgs {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-auto-flow: row;
+		background-color: rgb(255,255,255,.15);
+	}
+}
+
+/* 768px */
+@media (min-width: 48em) {
+	#gmap {
+		max-width: 50rem;
+		display: block;
+		margin: 0 auto;
+	}
+
+	#main_h1 {
+		font-size: 5rem;
+	}
+}
+
+/* 820 iPad Air */
+@media (min-width: 51.25em){
+}
+
+@media (min-width: 64em){
+	.gallery-imgs {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media (min-width: 120em) {
+	section {
+		max-width: 75rem;
+		margin: 0 auto;
+	}
+}
+
+/* Footer
+--------------------------------------------- */
+#page_footer {
+	text-align: center;
+	width: 100%;
+	border-top: 1px dotted darkblue; 
+	background-color: white;
+	color: #000;
+}
+
+#page_footer > p:last-of-type {
+	margin-bottom: 0;
+}
